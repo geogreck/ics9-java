@@ -18,4 +18,8 @@ public class Progression {
     public double countSum(int n){
         return (2 * this.a1 + this.d * (n - 1)) * n / 2;
     }
+
+    public String toString(){
+        return "Алгебраическая последовательность с первым членом " + this.a1 + " и шагом " + this.d;
+    }
 }
