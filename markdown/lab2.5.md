@@ -24,7 +24,7 @@
 ```java
 public class Particle {
     private static int n = 0;
-    private double mass, speed;
+    private double mass, speed, x, y, z;
     private static double energy = 0;
 
     public Particle(double inMass, double inSpeed){
@@ -32,6 +32,10 @@ public class Particle {
         this.mass = inMass;
         this.speed = inSpeed;
         Particle.energy += mass * speed * speed / 2;
+    }
+
+    public Particle(double inMass, double x, double y, double z){
+        Particle.
     }
 
     public static int n(){
