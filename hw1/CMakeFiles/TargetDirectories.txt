@@ -1,0 +1,3 @@
+/home/geogreck/vsc/ics9-java/hw1/CMakeFiles/rebuild_cache.dir
+/home/geogreck/vsc/ics9-java/hw1/CMakeFiles/edit_cache.dir
+/home/geogreck/vsc/ics9-java/hw1/CMakeFiles/detect_markers.dir
