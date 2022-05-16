@@ -7,6 +7,7 @@ public class Test {
         }
         System.out.println(set);
         set.changeElem(1, 5);
+        System.out.println(set);
         for (Integer integer : set) {
             System.out.println(integer);
         }

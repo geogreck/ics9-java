@@ -58,7 +58,7 @@ public class IntSet implements Iterable<Integer> {
 
         @Override
         public Integer next() {
-            return (int) Math.pow(container[pos++], m);
+            return (int) Math.pow(m, container[pos++]);
         }
     }
 
