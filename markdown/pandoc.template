@@ -332,7 +332,11 @@ $endif$
 \newcommand{\theteacher}{$преподаватель$}
 \newcommand{\thegroup}{$группа$}
 \newcommand{\thecourse}{$предмет$}
-\newcommand{\thenumber}{$номер$}
+$if(номер)$
+\newcommand{\thenumber}{№$номер$}
+$else$
+\newcommand{\thenumber}{}
+$endif$
 
 \usepackage{geometry}
 \geometry{legalpaper, portrait, margin=0.75in}
@@ -372,7 +376,7 @@ $endif$
     \centering
     \topskip0pt
     \vspace*{\fill}
-    \worktype\ №\thenumber{}\\
+    \worktype\ \thenumber{}\\
     <<\thetitle{}>>\\
     по курсу: <<\thecourse{}>>
     \vspace*{\fill}
