@@ -6,12 +6,12 @@ void display(StringMatrix stM){
     {
         for (size_t j = 0; j < stM.getM(); j++)
         {
-            std::cout<<"|";
-            for (size_t k = 0; k < stM.getAmount(); k++)
+            std::cout<<"{";
+            for (size_t k = 0; k < stM.getAmount() - 1; k++)
             {
                 std::cout<<stM[i][j][k]<<", ";
             }
-            std::cout<<"|";
+            std::cout<<stM[i][j][stM.getAmount() - 1]<<"} ";
         }
         std::cout<<"\n";
     }
@@ -33,9 +33,13 @@ int main(){
     test[1][0] = foo3;
     test[0][1] = foo2;
     test[1][1] = foo4;
+
     foo(test); // Проверка работы конструктора копий
     display(test); //Копия изменилась, сам объект не изменился
-    StringMatrix t = test; //Присваиваем объект переменной
+
+    StringMatrix t(1,1); 
+    t = test; //Присваиваем объект переменной
+
     StringMatrix* foo = test.multiply(); //Умножение матрицы на саму себя возвращает нам новую матрицу
     display(*foo);
     delete foo;

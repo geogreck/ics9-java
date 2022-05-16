@@ -48,7 +48,13 @@ std::string** StringMatrix::operator[](size_t i){
 
 StringMatrix& StringMatrix::operator=(const StringMatrix& obj){
     if (this!= &obj){
+        for (size_t i = 0; i < m; i++){
+            delete[] matrix[i];
+        }
+        delete[] matrix;
+
         this->m = obj.m;
+        
         matrix = new std::string**[m];
         for (size_t i = 0; i < m; i++)
         {
@@ -62,7 +68,7 @@ StringMatrix& StringMatrix::operator=(const StringMatrix& obj){
             }
         }
         
-        delete [] this->matrix;
+        //delete [] this->matrix;
         for (size_t i = 0; i < m; i++)
         {
             for (size_t j = 0; j < m; j++)
