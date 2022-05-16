@@ -5,6 +5,7 @@ CFLAGS= -g -std=c++20 -Wall -Wextra -O2 -pedantic -Wformat=2 -Wfloat-equal -Wcon
 CDEBUGFLAGS= -g -std=c++20 -Wall -Wextra -O0 -pedantic -Wshadow -Wformat=2 -Wfloat-equal -Wconversion
 task=test
 sources := $(wildcard *.cpp)
+headers := $(wildcard *.h*)
 
 all: run
 
@@ -13,7 +14,7 @@ run: build
 
 build: a
 
-a: $(sources)
+a: $(sources) $(headers)
 	$(CC) $(CFLAGS) $(sources) -o a
 
 debug: d
